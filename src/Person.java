@@ -2,12 +2,12 @@ public class Person {
     //Properties
     private String name;
     private int age;
-    //Using strings for these...
-    private String height;
-    private String weight;
+
+    private int height;
+    private double weight;
 
     //Constructor
-    public Person(String name, int age, String height, String weight) {
+    public Person(String name, int age, int height, double weight) {
         //Set properties
         setName(name);
         setAge(age);
@@ -34,19 +34,26 @@ public class Person {
     }
 
     //height
-    public String getHeight() {
+    public int getHeight() {
         return height;
     }
-    public void setHeight(String height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
     //weight
-    public String getWeight() {
+    public double getWeight() {
         return weight;
     }
-    public void setWeight(String weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
+    //Behaviour method
+    public void growOlder(){
+        //Bloomin cheek...
+        this.age++;
+        this.height--;
+        this.weight -= 0.5;
+    }
 }
